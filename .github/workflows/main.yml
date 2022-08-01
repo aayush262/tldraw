@@ -29,5 +29,5 @@ jobs:
         run: yarn lint
 
       # run unit tests
-      - name: Jest Annotations & Coverage
-        run: yarn test:ci
+      # - name: Jest Annotations & Coverage
+      #   run: yarn test:ci
