@@ -225,6 +225,7 @@ export type TDToolType =
   | TDShapeType.Line
   | TDShapeType.Arrow
   | TDShapeType.Sticky
+  | TDShapeType.Heart
 
 export type Easing =
   | 'linear'
@@ -294,6 +295,7 @@ export enum TDShapeType {
   Group = 'group',
   Image = 'image',
   Video = 'video',
+  Heart = 'heart',
 }
 
 export enum Decoration {
@@ -393,6 +395,11 @@ export interface StickyShape extends TDBaseShape {
   text: string
 }
 
+export interface HeartShape extends TDBaseShape {
+  type: TDShapeType.Heart
+  size: number[]
+}
+
 // The shape created when multiple shapes are grouped
 export interface GroupShape extends TDBaseShape {
   type: TDShapeType.Group
@@ -412,6 +419,7 @@ export type TDShape =
   | StickyShape
   | ImageShape
   | VideoShape
+  | HeartShape
 
 /* ------------------ Shape Styles ------------------ */
 

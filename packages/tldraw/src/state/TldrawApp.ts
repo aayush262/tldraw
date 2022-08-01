@@ -82,6 +82,7 @@ import { StateManager } from './StateManager'
 import { clearPrevSize } from './shapes/shared/getTextSize'
 import { getClipboard, setClipboard } from './IdbClipboard'
 import { deepCopy } from './StateManager/copy'
+import { HeartTool } from './tools/HeartTool'
 
 const uuid = Utils.uniqueId()
 
@@ -188,6 +189,7 @@ export class TldrawApp extends StateManager<TDSnapshot> {
     [TDShapeType.Line]: new LineTool(this),
     [TDShapeType.Arrow]: new ArrowTool(this),
     [TDShapeType.Sticky]: new StickyTool(this),
+    [TDShapeType.Heart]: new HeartTool(this),
   }
 
   currentTool: BaseTool = this.tools.select
